@@ -8,13 +8,13 @@
 # Michael Hay <project.hay@gmail.com>
 
 
-DOCUMENTATION = r'''
+DOCUMENTATION = r"""
 ---
 module: win_git
 version_added: "2.0"
-short_description: Deploy software (or files) from git checkouts
+short_description: Deploy software \(or files\) from git checkouts
 description:
-    - Deploy software (or files) from git checkouts
+    - Deploy software \(or files\) from git checkouts
     - SSH only
 notes:
     - git for Windows need to be installed
@@ -31,36 +31,41 @@ options:
     required: true
   replace_dest:
     description:
-      - replace destination folder if exists (recursive!)
+      - Replace destination folder if exists \(recursive\).
     required: false
     default: false
   accept_hostkey:
     description:
-      - add hostkey to known_hosts (before connecting to git)
+      - Add hostkey to known_hosts \(before connecting to git\)?
     required: false
     default: false
   update:
     description:
-      - do we want to update the repo (use git pull origin branch)
+      - Update the repository\?
+    required: false
+    default: false
+  clone:
+    description:
+      - Clone the repository\?
     required: false
     default: false
   recursive:
     description:
-      - if C(no), repository will be cloned without the --recursive option, skipping sub-modules
+      - If C(no), repository will be cloned without the C(--recursive) option, skipping sub-modules.
     type: bool
     default: 'yes'
   branch:
     description:
-      - branch to update / clone the repo
+      - The branch to pull from.
     required: false
     default: master
 author:
 - Anatoliy Ivashina
 - Pablo Estigarribia
 - Michael Hay
-'''
+"""
 
-EXAMPLES = r'''
+EXAMPLES = r"""
   # git clone cool-thing.
   win_git:
     repo: "git@github.com:tivrobo/Ansible-win_git.git"
@@ -69,4 +74,4 @@ EXAMPLES = r'''
     update: no
     replace_dest: no
     accept_hostkey: yes
-'''
+"""

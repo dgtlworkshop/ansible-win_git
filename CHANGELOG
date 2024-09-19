@@ -1,3 +1,14 @@
+20240919:
+
+  - Minor changes to module parameter descriptions (GrantShotwell DGTL)
+  - Add missing documentation for "clone" parameter (GrantShotwell DGTL)
+  - Rename functions to comply better with standard PowerShell naming conventions (GrantShotwell DGTL)
+  - Make most functions take arguments for readability (GrantShotwell DGTL)
+  - Organizational improvements for readability (GrantShotwell DGTL)
+  - Re-organize the module results object (GrantShotwell DGTL)
+  - Use "$X = & cmd /c git.exe" instead of "& cmd /c git.exe | Tee-Object -Variable X | Out-Null" which solved some errors (GrantShotwell DGTL)
+  - Checks if repository actually needs updates, setting "changed" result properly (GrantShotwell DGTL)
+
 20190305:
 
   - Added "recursive" option for clone (tivrobo)
